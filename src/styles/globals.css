@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes rotateLetter {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#head-title {
+  margin-top: 40px;
+  position: absolute;
+  animation: fill-animation 0.5s ease forwards 2.5s;
+}
+
+@keyframes fill-animation {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: white;
+  }
+}
+
+#head-title path {
+  stroke-dasharray: 800px;
+  stroke-dashoffset: 800px;
+  animation: line-animation 3s ease forwards;
+}
+
+
+@keyframes line-animation {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
