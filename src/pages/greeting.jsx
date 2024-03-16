@@ -1,5 +1,5 @@
-import { Context } from "@/components/context";
-import { useRouter } from "next/router";
+
+import { Context } from "@/components/context.js";
 import { useContext } from "react";
 
 export default function Home() {
