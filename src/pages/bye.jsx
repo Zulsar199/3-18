@@ -6,7 +6,7 @@ export default function Home() {
           <img src="/bye.gif" alt="" />
           <div className=" absolute top-5 left-6">
             <p className="text-white"> Тэгсэн ч баярын мэнд </p>
-            <img className="w-5 h-5" src="/emojiHug.gif" alt="" />
+            <img className="w-5 h-5" src="/emojiPng.webp" alt="" />
           </div>
         </div>
       </div>

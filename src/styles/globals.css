@@ -12,8 +12,8 @@
 }
 
 #head-title {
-  margin-top: 40px;
-  position: absolute;
+  /* margin-top: 40px; */
+  /* position: absolute; */
   animation: fill-animation 0.5s ease forwards 2.5s;
 }
 
@@ -29,12 +29,27 @@
 #head-title path {
   stroke-dasharray: 800px;
   stroke-dashoffset: 800px;
-  animation: line-animation 3s ease forwards;
+  animation: line-animation 5s ease forwards;
 }
-
 
 @keyframes line-animation {
   to {
     stroke-dashoffset: 0;
+  }
+}
+
+.scrolling-text {
+  height: 50px; /* Set the width of the container */
+  /* overflow: hidden; */
+  white-space: wrap; /* Prevent the text from wrapping */
+  animation: scroll 20s linear 3s infinite; /* Define the animation */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-300%);
   }
 }
