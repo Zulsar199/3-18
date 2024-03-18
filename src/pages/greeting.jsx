@@ -4,7 +4,7 @@ import MyCarousel from "@/components/Carousel";
 
 export default function Home() {
   const { name } = useContext(Context);
-  const [index, setIndex] = useState(0); 
+  const [index, setIndex] = useState(0);
 
   const images = ["/img1.jpg", "/img2.jpg", "/img3.jpg"];
   const bestOf = ["мундаг", "хичээнгүй", "хөгжилтэй", "нөхөрсөг"];
@@ -24,7 +24,7 @@ export default function Home() {
       pElement.classList.add("scrolling-text");
       setTimeout(() => {
         pElement.classList.remove("scrolling-text");
-      }, 70000); // Remove the class after 
+      }, 70000); // Remove the class after
     }
   }, []);
   return (
@@ -32,7 +32,7 @@ export default function Home() {
       <div className="h-[100vh] max-w-screen-xl m-auto">
         <div className="relative w-full h-full container m-auto">
           <div className="w-full h-full flex flex-col justify-between items-center">
-            <div className="w-full h-[150px] flex justify-center items-center max-[400px]:mt-[70px] max-[400px]:mb-[20px]">
+            <div className="w-full h-[150px] flex justify-center items-center max-[400px]:mt-[0px] max-[400px]:mb-[20px]">
               <svg
                 viewBox="0 0 414 99"
                 id="head-title"
@@ -72,7 +72,7 @@ export default function Home() {
                 />
               </svg>
             </div>
-            <div className="relative max-[400px]:mb-0 max-[390px]:w-[300px] max-[380px]:h-[100px] sm:w-[700px] h-[200px] text-white text-center p-5 max-[400px]:p-0 overflow-hidden">
+            <div className="relative max-[400px]:mb-0 max-[450px]:w-[300px] max-[380px]:h-[100px] sm:w-[700px] h-[200px] text-white text-center p-5 max-[400px]:p-0 overflow-hidden">
               <p
                 className="font-bold text-5xl mt-8 max-[400px]:mt-0 text-gray-300"
                 style={{ fontFamily: "Tangerine, serif" }}
@@ -82,8 +82,8 @@ export default function Home() {
               <div className="relative w-full min-[400px]:h-[30px] h-[78px] overflow-hidden mt-5">
                 <div className="max-[400px]:hidden absolute top-[95px] left-0 w-full h-[20px]"></div>
                 <div className="max-[400px]:hidden absolute top-[115px] left-0 w-full h-[100px] bg-red-200"></div>
-                <div className=" w-full text-center flex flex-col justify-center items-center ">
-                  <div className="scrolling-text w-[500px] max-[400px]:w-[300px]">
+                <div className=" w-full text-center flex flex-col justify-center items-center max-[450px]:w-[300px]">
+                  <div className="scrolling-text w-[500px] max-[450px]:w-[300px]">
                     <p className="text-gray-200">
                       Ангийн хамгийн {bestOf[index]} залуу чамд "Монгол цэргийн
                       өдөр"-ийн баярын мэндчилгээг дэвшүүлж, ажил алба, сурлага
@@ -98,11 +98,20 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="mt-[0px] max-[400px]:mb-20 max-w-screen-xl max:[400px]:mt-8 h-[500px] max-[400px]:h-[250px] text-white flex *:w-full *:h-[500px] overflow-hidden">
+            <div className=" max-[400px]:mb-5 max-[400px]:mt-5 max-w-screen-xl h-[500px] max-[400px]:h-[250px] text-white flex *:w-full *:h-[500px] overflow-hidden">
               <MyCarousel images={images} />
             </div>
-            <div className="w-full flex justify-center items-center mb-10">
-              <p className="max-[400px]:block hidden text-gray-50 text-center">
+            <div className="max-[400px]:mb-10 underline underline-offset-8">
+              <a
+                className="text-gray-300"
+                href="https://meme-pied-two.vercel.app/
+                "
+              >
+                Meme time
+              </a>
+            </div>
+            <div className="w-full flex justify-center items-center mb-[100px]">
+              <p className="max-[450px]:block hidden text-gray-50 text-center">
                 May god of programming bless you forever
               </p>
             </div>
